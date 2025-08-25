@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () =>{
       }
       alert(data.message || "Has iniciado sesion correctamente");
       formulario.reset();
-      window.location.href = "../inicio/inicio.html";
+      window.location.href = "../../index.html";
     } catch (err) {
       console.error('Ha ocurrido un error en la conexion...', err);
       alert("No ha sido posible conectar con el servidor");
@@ -59,4 +59,5 @@ document.addEventListener("DOMContentLoaded", () =>{
     window.location.href = "../registrar/registrar.html";
   })
 });
+
 
