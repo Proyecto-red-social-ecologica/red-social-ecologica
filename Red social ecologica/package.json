@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.1",
+    "expess": "^0.0.1-security",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.3",
+    "node.js": "^0.0.1-security",
+    "nodemon": "^3.1.10",
+    "path": "^0.12.7"
+  },
+  "name": "red_social",
+  "version": "1.0.0",
+  "description": "Nuestra red social ecologica ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "Red",
+    "social",
+    "medio",
+    "ambiente"
+  ],
+  "author": "Yuvilis Lamprea & Fernando Trujillo",
+  "license": "ISC"
+}
