@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended: true})) //Para uso de formularios
 //Archivos de rutas estaticas
 app.use(express.static(path.join(__dirname, '/sesion')));
 app.use('/registrar', express.static(path.join(__dirname, 'registrar')));
-app.use('/inicio', express.static(path.join(__dirname, 'inicio')))
+app.use('../../', express.static(path.join(__dirname, 'index.html')))
 
 //Rutas importantes
 const rutaRegistro = require('./RUTAS/registro');
@@ -31,5 +31,6 @@ app.get("/", (req, res) => {
 app.listen (PORT, () => {
   console.log(`La vida corre en: http://localhost:${PORT}`);
 });
+
 
 
