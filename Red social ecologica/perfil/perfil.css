@@ -95,13 +95,13 @@ body::before {
   }
   .editar{
     margin-top: -130px;
-    margin-left: 900px;
+    margin-left: 1000px;
     vertical-align: middle;
-    width: 500px;
-    height: 90px;
+    width: 300px;
+    height: 70px;
     border-radius: 40px;
-    background-color: rgb(128, 150, 170);
-    font-size: 40px;
+    background-color: rgb(158, 206, 75);
+    font-size: 30px;
     cursor: pointer;  
     position: relative;
     transition: transform 0.3s ease-in-out;
@@ -109,7 +109,8 @@ body::before {
   }
   .editar:hover{
     transform: scale(1.1);
-    box-shadow: 0 0 25px 12px rgb(255, 254, 254)
+    box-shadow: 0 0 25px 12px rgb(255, 254, 254);
+    background-color: #145A32;
   }
 
   .cuadros{
