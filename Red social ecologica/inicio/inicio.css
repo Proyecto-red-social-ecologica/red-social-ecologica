@@ -1,0 +1,235 @@
+body{
+    margin: 0;
+    background-color: rgb(232, 251, 208);
+}
+
+body::before {
+    content: '🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃🍃';
+    font-size: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .contenido {
+    background-color: #a6d24c;
+  }
+  
+  .barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .izquierda {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .centro {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  .derecha {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .treslineas {
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    text-shadow: 5px 5px 10px black;
+    margin-left: 30px;
+    margin-top: -5px;
+    cursor: pointer;
+  }
+  
+  .ecosistema {
+    font-size: 30px;
+    color: white;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    margin-left: 50px;
+  }
+  .ecosistema:hover{
+    color: #145A32;
+    transform: scale(1.1);
+  }
+  .retos,
+  .puntos,
+  .material {
+    font-size: 30px;
+    color: white;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    margin-right: 30px;
+    cursor: pointer;
+    position: relative;
+  }
+  .retos:hover,
+  .puntos:hover,
+  .material:hover {
+    color: #145A32;
+    transform: scale(1.1);
+
+  }
+  
+  .fotop {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;  
+    position: relative;
+  }
+  
+  .perfil {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+  }
+
+/*publicacion*/
+
+.impu{
+  margin-left: 80px;
+  max-width: 50px;
+  max-height: 50px;
+}
+
+
+.UNO{
+  max-width: 850px;
+  min-height: calc(100vh - 100px);
+  margin-left: 20%;
+  background-color: rgb(246, 247, 238);
+  padding: 30px;
+  translate: 0;
+}
+
+.DOS{
+  display: flex;  
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  font-size: 20PX;
+  margin-top: 120px;
+  }
+  
+  .DOS img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  
+  .TRES img {
+    width: 80%;
+    height: 450px;
+    margin-top: 10px;
+    margin-left: 85px;
+  }
+  
+  .barra-iconos {
+    background-color: #edece7;
+    padding: 10px 15px;
+    display: flex;
+    gap: 20px;
+    margin-top: -4px;
+    width: 650px;
+    margin-left: 85px;
+  }
+  
+  .barra-iconos .icono {
+    width: 32px;
+    height: 32px;
+  }
+
+  .puntos-horizontal{
+    width: 50px;
+    margin-left: 400px;
+    
+  }
+
+
+  .trespuntos{
+    margin-left: 340px;
+    max-height: 30px;
+    max-width: 30px;
+  }
+
+  .barra-descripcion {
+    background-color: #edece7;
+    padding: 10px 15px;
+    width: 650px;
+    margin-left: 85px;
+    font-size: 20px;
+    line-height: 1.5;
+ }
+ 
+.izquierda {
+  position: relative;
+}
+
+
+.menu {
+  display: none; 
+  position: absolute;
+  top: 77px; 
+  left: 0;
+  background-color:  #a6d24c;
+  border: 1px solid  #a6d24c;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 100;
+  height: 40px;
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT','Trebuchet MS', sans-serif;
+}
+
+.menu-item {
+  padding: 10px 20px;
+  cursor:pointer;
+  color: black;    
+}            
+
+.menu-item:hover {
+  background-color:  #a6d24c
+}
+
+a {
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.des {
+  display: none;  
+  position: absolute;
+  top: 77px; 
+  left:430px;
+  background-color:  #a6d24c;
+  border: 1px solid  #a6d24c;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 100;
+  height: 40px;
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT','Trebuchet MS', sans-serif;
+}
+
+.des-item {
+  padding: 10px 20px;
+  cursor:pointer;
+  color: black;    
+}            
+
+.des-item:hover {
+  background-color:  #a6d24c
+}
+
+
