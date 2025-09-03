@@ -20,7 +20,7 @@ const rutaRegistro = require('./RUTAS/registro');
 const rutaInicio = require('./RUTAS/sesion');
 
 app.use('/registro', rutaRegistro);
-app.use('/sesion', rutaInicio) ;
+app.use('/sesion', rutaInicio);
 
 // Donde arranca el servidor
 app.get("/", (req, res) => {
@@ -31,6 +31,7 @@ app.get("/", (req, res) => {
 app.listen (PORT, () => {
   console.log(`La vida corre en: http://localhost:${PORT}`);
 });
+
 
 
 
