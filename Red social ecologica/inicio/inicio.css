@@ -9,12 +9,10 @@ img {
 
 body{
     margin: 0;
-    background:  url("FOTOS/hojas.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-
-
+    background-color: #e3efca;
 }
 
 body::before {
