@@ -5,10 +5,10 @@ const dotenv = require('dotenv')
 dotenv.config();
 
 const conexion = mysql.createConnection({
-  host: process.env.CONEXION_HOST || "localhost",
-  user: process.env.CONEXION_USER || "root",
-  password: process.env.CONEXION_PASSWORD || "",
-  database: process.env.CONEXION_NAME || "nuestraRedsocial",
+  host: process.env.MYSQL_ADDON_HOST || "localhost",
+  user: process.env.MYSQL_ADDON_USER || "root",
+  password: process.env.MYSQL_ADDON_PASSWORD || "",
+  database: process.env.MYSQL_ADDON_DB || "nuestraRedsocial",
 });
 
 conexion.connect ((err) =>{
@@ -20,5 +20,6 @@ conexion.connect ((err) =>{
 })
 
 module.exports = conexion;
+
 
 
