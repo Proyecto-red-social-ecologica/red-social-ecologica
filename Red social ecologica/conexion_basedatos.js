@@ -8,7 +8,10 @@ const conexion = mysql.createConnection({
   host: process.env.CONEXION_HOST || "localhost",
   user: process.env.CONEXION_USER || "root",
   password: process.env.CONEXION_PASSWORD || "",
-  database: process.env.CONEXION_NAME || "nuestraRedsocial"
+  database: process.env.CONEXION_NAME || "nuestraRedsocial",
+  waitForConnections: true,
+  connectionLimit: 5, 
+  queueLimit: 0
 });
 
 conexion.connect ((err) =>{
@@ -20,3 +23,4 @@ conexion.connect ((err) =>{
 })
 
 module.exports = conexion;
+
