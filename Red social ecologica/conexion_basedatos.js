@@ -3,12 +3,11 @@ const dotenv = require('dotenv')
 
 /* Configuracion para conectar a base de datos*/ 
 dotenv.config();
-
 const conexion = mysql.createPool({
-  host: process.env.MYSQL_ADDON_HOST || "localhost",
-  user: process.env.MYSQL_ADDON_USER || "root",
-  password: process.env.MYSQL_ADDON_PASSWORD || "",
-  database: process.env.MYSQL_ADDON_DB || "nuestraRedsocial",
+  host: process.env.HOST || "localhost",
+  user: process.env.USER || "root",
+  password: process.env.PASSWORD || "",
+  database: process.env.DATA_BASE || "nuestraRedsocial",
 
   connectionLimit: 3 
 });
@@ -24,6 +23,7 @@ conexion.connect ((err) =>{
 })
 
 module.exports = conexion;
+
 
 
 
