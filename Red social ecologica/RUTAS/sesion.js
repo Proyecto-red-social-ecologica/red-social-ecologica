@@ -32,9 +32,7 @@ router.post('/', async (req, res) => {
         }
 
         req.session.adminId = admin.id_admin;
-        alert("Has iniciado como administrador");
-        return res.json({redirect: '../admin/admin.html'});
-
+        return res.json({mensaje: "Has iniciado como administrador"});
       });
       return  
     }
