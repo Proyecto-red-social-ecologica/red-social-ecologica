@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,12 +18,12 @@
        <h2 class="publicaciones">Publicaciones</h2>
        <h1 class="conteoS">3500</h1>
        <h2 class="seguidores">seguidores</h2>
-       <h1 class="conteosdos">2</h1>
+       <h1 class="conteosdos">2</h1>  
        <h2 class="seguidos">seguidos</h2>
 
        <div class="ali">
-        <p class="Descripcion">Ayudemos al medio ambiente😎.<br>Cumple tus retos y gana recompensas😉.<br>#Ecoamigo</p>
-        <button class="editar" type="button">EDITAR PERFIL</button>
+        <p class="Descripcion" id="bio">Ayudemos al medio ambiente😎.<br>Cumple tus retos y gana recompensas😉.<br>#Ecoamigo</p>
+        <button class="editar" type="button" onclick="mostrarFormulario()">EDITAR PERFIL</button>
        </div>
 
        <div>
@@ -52,6 +52,26 @@
     </footer>
     
     
-</body>
+</div>
 
+<!-- Formulario editar perfil -->
+<div id="formEditar" style="display:none;">
+  <form id="formPerfil" enctype="multipart/form-data">
+    <label>Nombre de usuario:</label>
+    <p id="nombreUsuario"></p><br>
+
+    <label>Biografía:</label>
+    <textarea name="biografia" id="bioInput"></textarea><br>
+
+    <label>Foto de perfil:</label>
+    <input type="file" name="foto"><br><br>
+
+    <button type="submit">Guardar</button>
+  </form>
+</div>
+
+<script src="perfil.js"></script>
+
+    
+</body>
 </html>
