@@ -14,15 +14,16 @@ const conexion = mysql.createPool({
 
 
 
-conexion.connect ((err) =>{
+/*conexion.connect ((err) =>{
   if (err){
     console.error("No ha sido posible conectar con la base de datos", err);
     return;
   }
   console.log("Conexion a la base de datos exitosa");
-})
+})*/
 
 module.exports = conexion;
+
 
 
 
