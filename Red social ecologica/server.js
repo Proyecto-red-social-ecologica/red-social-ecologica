@@ -3,7 +3,7 @@ const path = require('path');
 const bcrypt = require('bcrypt');
 const app = express();
 const session = require("express-session");
-const PORT = process.env.PORT || 3000 || 3306;
+const PORT = process.env.PORT || 3000;
 const perfil = require("./RUTAS/perfil");
 const retos = require("./RUTAS/retos");
 
@@ -55,6 +55,7 @@ app.get("/", (req, res) => {
 app.listen (PORT, () => {
   console.log(`La vida corre en: http://localhost:${PORT}`);
 });
+
 
 
 
