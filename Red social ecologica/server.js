@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'sesion')));
 app.use('/registrar', express.static(path.join(__dirname, 'registrar')));
 app.use('/inicio', express.static(path.join(__dirname, 'inicio')));
 app.use('/perfil', express.static(path.join(__dirname, 'perfil')));
-app.use('/admin', express.static(path.join(__dirname, 'admin')));
+app.use('/retos', express.static(path.join(__dirname, 'retos')));
 app.use('/subidas', express.static('subidas'));
 
 //Rutas importantes
@@ -33,6 +33,17 @@ app.use('/registro', rutaRegistro);
 app.use('/sesion', rutaInicio) ;
 app.use('/api/perfil', perfil);
 app.use('/api/retos', retos);
+
+// Validacion de usuario
+app.get('/api/sesion-estado', (req, res) => {
+  if (req.session.adminId) {
+    return res.json({ tipo: 'admin' });
+  } else if (req.session.userId) {
+    return res.json({ tipo: 'usuario' });
+  } else {
+    return res.json({ tipo: 'ninguno' });
+  }
+});
 
 
 // Donde arranca el servidor
