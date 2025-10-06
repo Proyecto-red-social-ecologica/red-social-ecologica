@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Panel Administrador</title>
+  <link rel="stylesheet" href="retos.css">
+
+</head>
+<body>
+  <h1>Administrador de camelia</h1>
+  <h1>Publicar retos</h1>
+
+  <form id="formReto" enctype="multipart/form-data">
+    <label for="nombre_reto">Nombre del reto:</label>
+    <input type="text" id="nombre_reto" name="nombre_reto" required>
+
+    <label for="descripcion">Descripción:</label>
+    <textarea id="descripcion" name="descripcion" rows="5" required></textarea>
+
+    <label for="foto_reto">Foto del reto:</label>
+    <input type="file" id="foto_reto" name="foto_reto" accept="image/*">
+
+    <button type="submit">Publicar reto</button>
+    <button onclick="window.location.href='/inicio/inicio.html'">Ir al inicio</button>
+
+  </form>
+  <script src="retos.js"></script>
+</body>
+</html>
+     

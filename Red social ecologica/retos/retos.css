@@ -1,0 +1,7 @@
+    body { font-family: Arial, sans-serif; background:#f4fff0; padding:30px; }
+    form { max-width:600px; margin:auto; background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+    label { display:block; margin-top:15px; font-weight:bold; }
+    input[type="text"], textarea { width:100%; padding:8px; margin-top:5px; border:1px solid #ccc; border-radius:6px; }
+    input[type="file"] { margin-top:8px; }
+    button { margin-top:20px; padding:10px 20px; background:#2e8b57; color:white; border:none; border-radius:6px; cursor:pointer; }
+    button:hover { background:#256f47; }
