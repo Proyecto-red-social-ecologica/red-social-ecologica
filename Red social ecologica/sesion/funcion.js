@@ -44,9 +44,14 @@ document.addEventListener("DOMContentLoaded", () =>{
         alert(data.error || "Error al iniciar sesion");
         return;
       }
-      alert(data.message || "Has iniciado sesion correctamente");
-      formulario.reset();
-      window.location.href = "../../index.html";
+      if (data.redirect) {
+        window.location.href = data.redirect
+      } else {
+        alert(data.message || "Has iniciado sesion correctamente");
+        formulario.reset();
+        window.location.href = "../inicio/inicio.html";
+      }
+     
     } catch (err) {
       console.error('Ha ocurrido un error en la conexion...', err);
       alert("No ha sido posible conectar con el servidor");
@@ -59,5 +64,4 @@ document.addEventListener("DOMContentLoaded", () =>{
     window.location.href = "../registrar/registrar.html";
   })
 });
-
 
