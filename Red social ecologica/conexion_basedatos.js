@@ -11,6 +11,17 @@ const conexion = mysql.createConnection({
   database: "bvhiffdubewju9mcd3hm"
 });
 
+/*const conexion = mysql.createPool({
+  host: process.env.MYSQL_ADDON_HOST || "localhost",
+  user: process.env.MYSQL_ADDON_USER || "root",
+  password: process.env.MYSQL_ADDON_PASSWORD || "",
+  database: process.env.MYSQL_ADDON_DB || "nuestraRedsocial",
+  
+
+  connectionLimit: 3 
+});*/
+
+
 
 conexion.connect ((err) =>{
   if (err){
@@ -21,6 +32,7 @@ conexion.connect ((err) =>{
 })
 
 module.exports = conexion;
+
 
 
 
