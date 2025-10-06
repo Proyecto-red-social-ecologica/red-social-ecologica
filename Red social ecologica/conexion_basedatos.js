@@ -4,22 +4,14 @@ const dotenv = require('dotenv')
 /* Configuracion para conectar a base de datos*/ 
 dotenv.config();
 
-const conexion = mysql.createConnection({
-  host:  "bvhiffdubewju9mcd3hm-mysql.services.clever-cloud.com",
-  user: "u2mewwsigm7q7xee",
-  password: "LBqY3NsstVZNXTk7xWBQ",
-  database: "bvhiffdubewju9mcd3hm"
-});
-
-/*const conexion = mysql.createPool({
+const conexion = mysql.createPool({
   host: process.env.MYSQL_ADDON_HOST || "localhost",
   user: process.env.MYSQL_ADDON_USER || "root",
   password: process.env.MYSQL_ADDON_PASSWORD || "",
   database: process.env.MYSQL_ADDON_DB || "nuestraRedsocial",
-  
 
   connectionLimit: 3 
-});*/
+});
 
 
 
@@ -32,6 +24,7 @@ conexion.connect ((err) =>{
 })
 
 module.exports = conexion;
+
 
 
 
