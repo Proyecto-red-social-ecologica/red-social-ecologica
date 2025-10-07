@@ -61,7 +61,8 @@ document.addEventListener("DOMContentLoaded", () =>{
   const botonRegistro = document.getElementById('registro');
   botonRegistro.addEventListener('click', (e) =>{
     e.preventDefault();
-    window.location.href = "../registrar/registrar.html";
+    window.location.href = "registrar.html";
   })
 });
+
 
