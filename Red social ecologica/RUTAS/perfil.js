@@ -21,7 +21,7 @@ router.get("/", (req, res) => {
   const id = req.session.userId;
   if(!id) return res.status(401).json({error: "Debes iniciar sesion"});
 
-  const sql = "SELECT nombre_usuario, biografia, foto_perfil FROM usuarios WHERE id_usuario = $1";
+  const sql = "SELECT nombre_usuario, biografia, foto_perfil FROM usuarios WHERE id_usuario = ?";
   baseDatos.query(sql, [id], (err, results) => {
     if (err) return res.status(500).json({ error: "Error al obtener perfil" });
     if (results.length === 0) return res.status(404).json({ error: "Usuario no encontrado" });
@@ -43,8 +43,8 @@ router.post("/editar", upload.single("foto"), (req, res) => {
   }
 
   const sql = `UPDATE usuarios
-    set biografia = $1, foto_perfil = COALESCE($2, foto_perfil)
-    WHERE id_usuario = $3 `;
+    set biografia = ?, foto_perfil = COALESCE(?, foto_perfil)
+    WHERE id_usuario = ?`;
 
     baseDatos.query(sql, [biografia, foto_perfil, id], (err, result) => {
       if (err) return res.status(500).json({error: "Error de actualizacion"});
@@ -55,3 +55,4 @@ router.post("/editar", upload.single("foto"), (req, res) => {
 
 
 module.exports = router;
+
