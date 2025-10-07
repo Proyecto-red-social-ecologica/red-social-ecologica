@@ -38,7 +38,7 @@ router.post('/', async (req, res) => {
     }
     
     //validar usuario en la base de datos
-    const validarSql = 'SELECT * FROM Usuarios WHERE nombre_usuario = ?';
+    const validarSql = 'SELECT * FROM usuarios WHERE nombre_usuario = ?';
     baseDatos.query(validarSql, [usuario], async (err, resultados) => {
       if (err){
         console.error("Ha ocurrido un error con las bases de datos", err);
@@ -70,5 +70,6 @@ router.post('/', async (req, res) => {
     res.status(500).json({error: "ha ocurrido un error inesperado..."});
   }
 });
+
 
 module.exports = router;
