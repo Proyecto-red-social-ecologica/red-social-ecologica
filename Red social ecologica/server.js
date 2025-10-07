@@ -18,7 +18,6 @@ app.use(session({
 }))
 
 //Archivos de rutas estaticas
-app.use(express.static(path.join(__dirname, '..'))); 
 app.use(express.static(path.join(__dirname, 'sesion')));
 app.use(express.static(path.join(__dirname, 'registrar')));
 app.use(express.static(path.join(__dirname, 'inicio')));
@@ -63,6 +62,7 @@ app.get("/inicio", (req, res) => {
 app.listen (PORT, () => {
   console.log(`La vida corre en: http://localhost:${PORT}`);
 });
+
 
 
 
