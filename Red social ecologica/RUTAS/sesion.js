@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
 
     //Validar al administrador
     if (usuario === "adminCamelia") {
-      const ValAdmin = 'SELECT * FROM administrador WHERE nombre_admin = ?';
+      const ValAdmin = 'SELECT * FROM administrador WHERE nombre_admin =  $1';
       baseDatos.query(ValAdmin, [usuario], async(err, resultadosAdmin) =>{
         if (err) {
           console.error('Ha ocurrido un error al validar: ', err);
@@ -38,7 +38,7 @@ router.post('/', async (req, res) => {
     }
     
     //validar usuario en la base de datos
-    const validarSql = 'SELECT * FROM usuarios WHERE nombre_usuario = ?';
+    const validarSql = 'SELECT * FROM usuarios WHERE nombre_usuario =  $1';
     baseDatos.query(validarSql, [usuario], async (err, resultados) => {
       if (err){
         console.error("Ha ocurrido un error con las bases de datos", err);
@@ -73,4 +73,5 @@ router.post('/', async (req, res) => {
 
 
 module.exports = router;
+
 
