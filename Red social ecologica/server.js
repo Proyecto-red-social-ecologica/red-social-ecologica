@@ -65,23 +65,3 @@ app.get("/inicio", (req, res) => {
 app.listen (PORT, () => {
   console.log(`La vida corre en: http://localhost:${PORT}`);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
