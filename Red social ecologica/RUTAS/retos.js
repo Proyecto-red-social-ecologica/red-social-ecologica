@@ -23,7 +23,7 @@ router.post("/", upload.single("foto_reto"), (req, res) => {
 
   const fotoRuta = req.file ? "/subidas/retos/" + req.file.filename : null;
 
-  const sql = "INSERT INTO retos (nombre_reto, descripcion, foto_reto, id_admin) VALUES (?, ?, ?, ?)";
+  const sql = "INSERT INTO retos (nombre_reto, descripcion, foto_reto, id_admin) VALUES ($1, $2, $3, $4)";
   baseDatos.query(sql, [nombre_reto, descripcion, fotoRuta, idAdmin], (err, result) => {
     if (err) {
       console.error("Error al guardar reto:", err.sqlMessage);
@@ -46,3 +46,4 @@ router.get("/", (req, res) => {
 });
 
 module.exports = router;
+
