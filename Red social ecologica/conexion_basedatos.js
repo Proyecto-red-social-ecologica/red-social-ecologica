@@ -21,18 +21,3 @@ conexion.getConnection((err, connection) =>{
 })
 
 module.exports = conexion;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
