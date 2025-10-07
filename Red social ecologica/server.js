@@ -45,24 +45,15 @@ app.get('/api/sesion-estado', (req, res) => {
   }
 });
 
-
 // Donde arranca el servidor
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, '/sesion', 'sesion.html'));
 });
 //Get de enrutamiento
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, '/registrar', 'registrar.html'));
+app.get("/registrar", (req, res) => {
+  res.sendFile(path.join(__dirname, 'registrar', 'registrar.html'));
 })
 
 app.listen (PORT, () => {
   console.log(`La vida corre en: http://localhost:${PORT}`);
 });
-
-
-
-
-
-
-
-
