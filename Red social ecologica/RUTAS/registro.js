@@ -18,7 +18,7 @@ router.post('/', async (req, res) => {
     const hash = await bcrypt.hash(contrasena, 10);
 
     //Registrar en base de datos
-    const sql = ('INSERT INTO usuarios (nombre_usuario, contrasena) VALUES ($1, $2)');
+    const sql = ('INSERT INTO usuarios (nombre_usuario, contrasena) VALUES (?, ?)');
     baseDatos.query(sql, [usuario, hash], (err, result) => {
       if (err){
         console.error("Ocurrio un error en la base de datos", err);
@@ -37,5 +37,6 @@ router.post('/', async (req, res) => {
 });
 
 module.exports = router;
+
 
 
