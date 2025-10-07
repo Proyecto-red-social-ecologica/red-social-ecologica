@@ -13,6 +13,7 @@ body::before {
     height: 100%;
     display: flex;
     align-items: center;
+    z-index: -1;
   }
   .pie{
   border-top: 3px solid  #000;
@@ -125,4 +126,5 @@ body::before {
   }
   .g1, .g2, .g3, .g4, .g5, .g6, .fotoverde:hover{
     box-shadow: 0 0 8px 2px rgb(238, 237, 237)
+
   }
