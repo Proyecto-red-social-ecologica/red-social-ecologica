@@ -10,7 +10,7 @@ const conexion = mysql.createPool({
   database: process.env.DATA_BASE || "nuestraRedsocial",
   connectionLimit: 2
 });
-//Alertas de conexion
+//Validacion de conexion
 conexion.getConnection((err, connection) =>{
   if (err){
     console.error("No ha sido posible conectar con la base de datos", err);
@@ -21,6 +21,7 @@ conexion.getConnection((err, connection) =>{
 })
 
 module.exports = conexion;
+
 
 
 
