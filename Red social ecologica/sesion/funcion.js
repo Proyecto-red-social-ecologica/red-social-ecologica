@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () =>{
       } else {
         alert(data.message || "Has iniciado sesion correctamente");
         formulario.reset();
-        window.location.href = "../inicio/inicio.html";
+        window.location.href = "/inicio";
       }
      
     } catch (err) {
@@ -64,5 +64,6 @@ document.addEventListener("DOMContentLoaded", () =>{
     window.location.href = "registrar.html";
   })
 });
+
 
 
