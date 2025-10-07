@@ -23,7 +23,7 @@ const storagePerfil = new CloudinaryStorage({
 const storageReto = new CloudinaryStorage({
   cloudinary: cloudinary,
   params: {
-    folder: 'Red social ecologia/retos', 
+    folder: 'Red social ecologica/retos', 
     format: async (req, file) => 'jpg',
     public_id: (req, file) => `reto-${Date.now()}`
   },
