@@ -8,11 +8,8 @@ const conexion = mysql.createPool({
   user: process.env.USER || "root",
   password: process.env.PASSWORD || "",
   database: process.env.DATA_BASE || "nuestraRedsocial",
-
-  connectionLimit: 3 
+  connectionLimit: 2
 });
-
-
 
 conexion.getConnection((err, connection) =>{
   if (err){
@@ -24,6 +21,7 @@ conexion.getConnection((err, connection) =>{
 })
 
 module.exports = conexion;
+
 
 
 
