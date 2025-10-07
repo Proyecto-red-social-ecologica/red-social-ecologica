@@ -60,9 +60,14 @@ app.get("/inicio", (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'index.html'));
 });
 
+app.get("/retos", (req, res) => {
+  res.sendFile(path.join(__dirname, 'retos', 'retos.html'));
+});
+
 app.use(express.static(path.join(__dirname, '..')));
 
 app.listen (PORT, () => {
   console.log(`La vida corre en: http://localhost:${PORT}`);
 });
+
 
