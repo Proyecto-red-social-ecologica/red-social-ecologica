@@ -55,13 +55,14 @@ app.get("/registrar", (req, res) => {
 });
 
 app.get("/inicio", (req, res) => {
-  res.sendFile(path.join(__dirname, 'Red social ecologica', 'index.html'));
+  res.sendFile(path.join(__dirname, '..', 'index.html'));
 });
 
 
 app.listen (PORT, () => {
   console.log(`La vida corre en: http://localhost:${PORT}`);
 });
+
 
 
 
