@@ -11,7 +11,7 @@ async function cargarPerfil() {
   const data = await res.json();
 
   document.querySelector(".nombreUS").innerText = data.nombre_usuario;
-  document.querySelector(".perfil").src = data.foto_perfil || "FOTOS/2.jpg";
+  document.querySelector(".perfil").src = data.foto_perfil || "/Red social ecologica/perfil/FOTOS/2.jpg";
   document.getElementById("bio").innerText = data.biografia || "Sin descripción";
   document.getElementById("nombreUsuario").innerText = data.nombre_usuario;
   document.getElementById("bioInput").value = data.biografia;
@@ -33,3 +33,4 @@ document.getElementById("formPerfil").addEventListener("submit", async (e) => {
 });
 
 cargarPerfil();
+
