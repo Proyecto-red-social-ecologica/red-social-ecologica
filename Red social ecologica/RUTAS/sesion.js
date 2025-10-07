@@ -62,7 +62,7 @@ router.post('/', async (req, res) => {
         return res.status(404).json({error: "Contraseña incorrecta"});
       }
       req.session.userId = usuarioExistente.id_usuario;
-      res.status(200).json({message: 'Inicio de sesion exitoso :D'/*, id: usuarioExistente.id_usuario*/});
+      res.status(200).json({message: 'Inicio de sesion exitoso :D', id: usuarioExistente.id_usuario});
       console.log('Inicio correcto');
     });
   } catch (error) {
@@ -73,3 +73,4 @@ router.post('/', async (req, res) => {
 
 
 module.exports = router;
+
