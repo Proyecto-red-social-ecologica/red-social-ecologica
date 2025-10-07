@@ -18,12 +18,13 @@ app.use(session({
 }))
 
 //Archivos de rutas estaticas
-app.use(express.static(path.join(__dirname, 'sesion')));
+app.use(express.static(path.join(__dirname, '..'))); 
+/*app.use(express.static(path.join(__dirname, 'sesion')));
 app.use(express.static(path.join(__dirname, 'registrar')));
 app.use(express.static(path.join(__dirname, 'inicio')));
 app.use(express.static(path.join(__dirname, 'perfil')));
 app.use(express.static(path.join(__dirname, 'retos')));
-app.use(express.static(path.join(__dirname, 'subidas')));
+app.use(express.static(path.join(__dirname, 'subidas')));*/
 
 //Rutas importantes
 const rutaRegistro = require('./RUTAS/registro');
@@ -55,14 +56,14 @@ app.get("/registrar", (req, res) => {
 });
 
 app.get("/inicio", (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'Red social ecologica', 'index.html'));
 });
-
 
 
 app.listen (PORT, () => {
   console.log(`La vida corre en: http://localhost:${PORT}`);
 });
+
 
 
 
