@@ -27,7 +27,6 @@ app.use(express.static(path.join(__dirname, 'perfil')));
 app.use(express.static(path.join(__dirname, 'retos')));
 app.use(express.static(path.join(__dirname, 'subidas')));
 
-app.use(express.static(path.join(__dirname, '..')));
 //Rutas importantes
 const rutaRegistro = require('./RUTAS/registro');
 const rutaInicio = require('./RUTAS/sesion');
@@ -61,7 +60,9 @@ app.get("/inicio", (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'index.html'));
 });
 
+app.use(express.static(path.join(__dirname, '..')));
 
 app.listen (PORT, () => {
   console.log(`La vida corre en: http://localhost:${PORT}`);
 });
+
