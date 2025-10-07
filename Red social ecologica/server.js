@@ -19,6 +19,7 @@ app.use(session({
 
 //Archivos de rutas estaticas
 app.use(express.static(path.join(__dirname))); 
+app.use('/inicio', express.static(path.join(__dirname, '..')));
 /*app.use(express.static(path.join(__dirname, 'sesion')));
 app.use(express.static(path.join(__dirname, 'registrar')));
 app.use(express.static(path.join(__dirname, 'inicio')));
@@ -56,13 +57,14 @@ app.get("/registrar", (req, res) => {
 });
 
 app.get("/inicio", (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, '..', 'index.html'));
 });
 
 
 app.listen (PORT, () => {
   console.log(`La vida corre en: http://localhost:${PORT}`);
 });
+
 
 
 
