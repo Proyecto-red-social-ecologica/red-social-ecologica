@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     if (data.tipo === "admin") {
       const enlaceAdmin = document.createElement("a");
-      enlaceAdmin.href = "Red social ecologica/retos/retos.html";
+      enlaceAdmin.href = "/retos/retos.html";
       enlaceAdmin.className = "menu-item";
       enlaceAdmin.textContent = "- Crear o gestionar retos 🧩";
       des.appendChild(enlaceAdmin);
@@ -63,5 +63,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Error verificando sesión:", err);
   }
 });
+
 
 
