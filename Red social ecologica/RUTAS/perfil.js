@@ -1,12 +1,13 @@
 const express = require("express");
-const multer = require("multer");
+//const multer = require("multer");
 const path = require("path");
 const router = express.Router();
 const baseDatos = require('../conexion_basedatos');
+const { uploadPerfil } = require('../cloud');
 const { error } = require("console");
 
 //Guardar fotos 
-const storage = multer.diskStorage({
+/*const storage = multer.diskStorage({
   destination: (req, file, cd) => {
     cd(null, "subidas/");
   },
@@ -15,7 +16,7 @@ const storage = multer.diskStorage({
   },
 });
 
-const upload = multer({storage});
+const upload = multer({storage});*/
 //Obtener datos
 router.get("/", (req, res) => {
   const id = req.session.userId;
@@ -31,7 +32,7 @@ router.get("/", (req, res) => {
 });
 
 //Datos de perfil
-router.post("/editar", upload.single("foto"), (req, res) => {
+router.post("/editar", uploadPerfil.single("foto"), (req, res) => {
   const id = req.session.userId;
   if(!id) return res.status(401).json({error: "Debes iniciar sesion"});
 
@@ -39,7 +40,8 @@ router.post("/editar", upload.single("foto"), (req, res) => {
   let foto_perfil = null; 
 
   if (req.file) {
-    foto_perfil = "/subidas/" + req.file.filename;
+    //foto_perfil = "/subidas/" + req.file.filename;
+    foto_perfil = req.file.path; 
   }
 
   const sql = `UPDATE usuarios
@@ -55,4 +57,5 @@ router.post("/editar", upload.single("foto"), (req, res) => {
 
 
 module.exports = router;
+
 
