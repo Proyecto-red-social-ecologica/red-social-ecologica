@@ -54,10 +54,6 @@ app.get("/registrar", (req, res) => {
   res.sendFile(path.join(__dirname, 'registrar', 'registrar.html'));
 });
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
-});
-
 app.get("/inicio", (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
@@ -67,6 +63,7 @@ app.get("/inicio", (req, res) => {
 app.listen (PORT, () => {
   console.log(`La vida corre en: http://localhost:${PORT}`);
 });
+
 
 
 
