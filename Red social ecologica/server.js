@@ -49,7 +49,7 @@ app.get('/api/sesion-estado', (req, res) => {
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, '/sesion', 'sesion.html'));
 });
-//Get de enrutamiento 
+//Get de enrutamiento.
 app.get("/registrar", (req, res) => {
   res.sendFile(path.join(__dirname, 'registrar', 'registrar.html'));
 });
@@ -67,3 +67,4 @@ app.use(express.static(path.join(__dirname, '..')));
 app.listen (PORT, () => {
   console.log(`La vida corre en: http://localhost:${PORT}`);
 });
+
