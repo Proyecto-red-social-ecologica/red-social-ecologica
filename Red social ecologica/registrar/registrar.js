@@ -55,11 +55,12 @@ document.addEventListener("DOMContentLoaded", () =>{
       alert(data.message || "Te has registrado correctamente");
       formulario.reset();
 
-      window.location.href = "/sesion.html";
+      window.location.href = "/sesion";
 
     } catch (err) {
       console.error(err);
       alert("Error de conexion, que ocurrio??")
     }
   });
+
 });
