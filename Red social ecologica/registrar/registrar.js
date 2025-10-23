@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () =>{
       alert(data.message || "Te has registrado correctamente");
       formulario.reset();
 
-      window.location.href = "/sesion";
+      window.location.href = "/sesion/sesion.html";
 
     } catch (err) {
       console.error(err);
@@ -64,3 +64,4 @@ document.addEventListener("DOMContentLoaded", () =>{
   });
 
 });
+
